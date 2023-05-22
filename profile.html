@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Picture Example</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      min-height: 100vh;
+      background-image: url("background.png"); /* Replace "background-image.jpg" with the path to your desired background image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .container {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    .left-section {
+      background-color: rgba(136, 197, 255, 0);
+      width: 200px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section-container {
+      background-color: #f2f2f2;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+      width: 80%;
+      height: 40%;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    .progress-container {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .progress-bar-container {
+      width: 200px;
+      height: 20px;
+      background-color: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      width: 0%; /* Set the desired progress width */
+      height: 100%;
+      background-color: green;
+    }
+
+    .progress-percentage {
+      font-size: 16px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .main-sections {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-section {
+      background-color: #f2f2f2;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px;
+      flex: 1 1 40%;
+      min-height: 200px;
+    }
+
+  </style>
+</head>
+<body>
+
+</body>
+<div class="container">
+    <div class="left-section">
+        <img src="logo.png" alt="Description of the image" style="width: 200px; height: auto;">
+        <p></p>
+        <a href="index.html" class="large-button1">Dashboard</a>
+        <a href="profile.html" class="large-button1">Profile</a>
+        <a href="settings.html" class="large-button1">Settings</a>
+        <a href="support.html" class="large-button1">Support</a>
+    </div>
+
+    <div class="main-content">
+        <p style="font-size: 40px;">Hello, <span id="name">John Doe</span>!</p>
+        <div class="main-sections">
+            <div class="main-section">
+                <h2>Your Unii Friend</h2>
+                <img src="friend.png" alt="Description of the image" style="width: 200px; height: auto;">
+                <!-- Add content here -->
+            </div>
+            <div class="main-section">
+                <h2>Badges</h2>
+                <img id="badgeImage" src="" alt="Badge Image">
+                <script>
+                  // Retrieve the completion status from localStorage
+                  var completionStatus = localStorage.getItem('completionStatus');
+                  
+                  if (completionStatus === 'true') {
+                      var badgeImage = document.createElement("img");
+                      badgeImage.src = "friend.png";
+                      badgeImage.alt = "Badge Image";
+                      document.body.appendChild(badgeImage);
+                  }
+              </script>
+                <!-- Add content here -->
+            </div>
+            <div class="main-section">
+                <h2>Progress Report</h2>
+                <!-- Add content here -->
+            </div>
+            <div class="main-section">
+                <h2>Achievements</h2>
+                <!-- Add content here -->
+            </div>
+        </div>
+    </div>
+    <div class="progress-container">
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+        </div>
+        <span class="progress-percentage">0% Progress</span>
+    </div>
+    <!-- Page content goes here -->
+</div>
+</html>

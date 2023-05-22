@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+    <style>
+        body {
+            background-color: tan;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #f2f2f2;
+            padding: 10px;
+            justify-content: space-between;
+        }
+        
+        .go-back-button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+            flex-grow: 1;
+            text-align: center;
+        }
+        
+        .settings-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .section-content {
+            margin-bottom: 20px;
+        }
+        
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="go-back-button">Go Back Home</a>
+        <h1 class="title">Settings</h1>
+    </div>
+    
+    <div class="settings-section">
+        <h2 class="section-title">General Settings</h2>
+        <div class="section-content">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+            
+            <br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address">
+            
+            <br><br>
+            
+            <label for="notifications">Enable Notifications:</label>
+            <input type="checkbox" id="notifications" name="notifications">
+            <label for="notifications">Receive email notifications</label>
+        </div>
+        <button class="button">Save Changes</button>
+    </div>
+    
+    <div class="settings-section">
+        <h2 class="section-title">Account Settings</h2>
+        <div class="section-content">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+            
+            <br><br>
+            
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+            
+            <br><br>
+            
+            <label for="avatar">Profile Picture:</label>
+            <input type="file" id="avatar" name="avatar">
+        </div>
+        <button class="button">Save Changes</button>
+    </div>
+    
+    <div class="settings-section">
+        <h2 class="section-title">Privacy Settings</h2>
+        <div class="section-content">
+            <label for="public-profile">Public Profile:</label>
+            <input type="checkbox" id="public-profile" name="public-profile">
+            <label for="public-profile">Make my profile public</label>
+            
+            <br><br>
+            
+            <label for="data-sharing">Data Sharing:</label>
+            <input type="checkbox" id="data-sharing" name="data-sharing">
+            <label for="data-sharing">Allow data sharing with partners</label>
+        </div>
+        <button class="button">Save Changes</button>
+    </div>
+    
+    <div class="settings-section">
+        <h2 class="section-title">Notification Settings</h2>
+        <div class="section-content">
+            <label for="email-notifications">Email Notifications:</label>
+            <input type="checkbox" id="email-notifications" name="email-notifications">
+            <label for="email-notifications">Receive email notifications</label>
+            
+            <br><br>
+            
+            <label for="push-notifications">Push Notifications:</label>
+            <input type="checkbox" id="push-notifications" name="push-notifications">
+            <label for="push-notifications">Receive push notifications</label>
+        </div>
+        <button class="button">Save Changes</button>
+    </div>
+    
+    <!-- Add more settings sections if needed -->
+    
+</body>
+</html>
