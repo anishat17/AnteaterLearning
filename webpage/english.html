@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Webpage</title>
+    <style>
+        
+        body {
+            background-color: tan;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #f2f2f2;
+            padding: 10px;
+            justify-content: space-between;
+        }
+        
+        .go-back-button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        .progress-bar-container {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 20%;
+        height: 10px;
+        background-color: #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background-color: green;
+        }
+
+        .progress-percentage {
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .progress-container {
+            display: flex;
+            align-items: center;
+        }
+            
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            margin: 10px;
+            position: relative;
+        }
+        .button.done:before {
+            content: '\f023'; /* Lock symbol (FontAwesome) */
+            background-image: url("images/percent.png"); /* Path to your image */
+            background-size: small;
+            background-position: right;
+            background-repeat: no-repeat;
+            font-family: 'FontAwesome';
+            font-size: 32px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: transparent;
+        }
+        
+        .button.locked:before {
+            content: '\f023'; /* Lock symbol (FontAwesome) */
+            background-image: url("images/Lock.png"); /* Path to your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'FontAwesome';
+            font-size: 32px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: transparent;
+        }
+        
+        .button.completed:before {
+            content: '\f005'; /* Star symbol (FontAwesome) */
+            font-family: 'FontAwesome';
+            font-size: 32px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: gold;
+        }
+
+        .button .image-container {
+            position: absolute;
+            top: -10px;
+            right: 5px;
+            width: 80px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Styles for the image */
+        .button .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var prog = localStorage.getItem('progress');
+        var prog1 = localStorage.getItem('progress1');
+        if (prog === 'true') {
+            document.getElementById('ldone').style.display = 'block';
+            document.getElementById('lnotdone').style.display = 'none';
+            //localStorage.removeItem('progress');
+        }
+        if (prog1 === 'true')
+        {
+            document.getElementById('d').style.display = 'block';
+            document.getElementById('nd').style.display = 'none';
+            //localStorage.removeItem('progress1');
+        }
+    });
+
+    </script>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="go-back-button">Go Back Home</a>
+        <h1 class="title">ENGLISH</h1>
+        <div class="progress-container">
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+            <span class="progress-percentage">0% Progress</span>
+        </div>
+    </div>
+    
+    <div class="button-container">
+        <a href="english_letter.html">
+            <div class="button">
+                <div class="image-container">
+                    <img id="lnotdone" src = "images/percent.png" style="display: block;">
+                </div>
+                <div class="image-container">
+                    <img id="ldone" src="images/star.png" style="display: none;">
+                </div>
+                
+                Letter Sounds
+            </div>
+        </a>
+        <a href="english_letter_blend.html">
+            <div class="button">
+                <div class="image-container">
+                    <img id="nd"src = "images/percent.png" style="display: block;">
+                </div>
+                <div class="image-container">
+                    <img id="d" src="images/star.png" style="display: none;">
+                </div>
+                Letter Blends
+            </div>
+        </a>
+        <div class="button">
+                <div class="image-container">
+                    <img src = "images/percent.png" style="display: block;">
+                </div>
+                <div class="image-container">
+                    <img id="myImage" src="images/badge1.png" style="display: none;">
+                </div>
+            Task 3
+        </div>
+        <div class="button locked">
+            Task 4
+        </div>
+        <div class="button locked">
+            Task 5
+        </div>
+        <div class="button locked">
+            Task 6
+        </div>
+        <div class="button locked">
+            Task 7
+        </div>
+        <div class="button locked">
+            Task 8
+        </div>
+        <div class="button locked">
+            Task 6
+        </div>
+        <div class="button locked">
+            Task 9
+        </div>
+        <div class="button locked">
+            Task 10
+        </div>
+        <div class="button locked">
+            Task 11
+        </div>
+        <div class="button locked">
+            Task 12
+        </div>
+        <div class="button locked">
+            Task 13
+        </div>
+        <div class="button locked">
+            Task 14
+        </div>
+    </div>
+</body>
+</html>

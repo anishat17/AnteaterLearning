@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Webpage</title>
+    <style>
+        body {
+            background-image: url("images/Blocks.png");
+            background-color: lightblue;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+        
+        .go-back-button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-right: auto;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .flashcard {
+            width: 90%;
+            max-width: 600px;
+            height: 70vh;
+            background-color: #E0D9FC;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            margin: auto;
+        }
+
+        .flashcard-button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .flashcard-text {
+            color: black;
+            font-size: 400px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .flashcard-next {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .flashcard-next-text {
+            font-size: 25px;
+            margin: 0;
+        }
+
+        .flashcard-next-button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .completion-message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+    <script>
+        function performAction() {
+          // Store the flag indicating the action has occurred in localStorage
+          localStorage.setItem('actionCompleted', 'true');
+        }
+        function setProgress()
+            {
+            localStorage.setItem('progress', 'true');
+            }
+      </script>
+</head>
+<body>
+    <div class="header">
+        <a href="english.html" class="go-back-button">Go Back Home</a>
+    </div>
+    
+    <!-- Rest of your webpage content goes here -->
+
+    <div class="flashcard" onclick="playSound(event)">
+        <div class="flashcard-text">
+            <span id="letter">a</span>
+        </div>
+        <div class="flashcard-next">
+            <p class="flashcard-next-text">Click the letter to hear the sound</p>
+            <a href="#" class="flashcard-next-button" onclick="nextLetter(event)">Next</a>
+        </div>
+    </div>
+
+    <div id="completionMessage" class="completion-message">Good job! You have completed the letter sounds activity!</div>
+
+    <audio id="audio"></audio>
+    
+    <script>
+        var currentLetterIndex = 0;
+        var letters = "abcdefghijklmnopqrstuvwxyz";
+        var letterElement = document.getElementById("letter");
+        var completionMessage = document.getElementById("completionMessage");
+
+        function playSound(event) {
+            event.stopPropagation();
+
+            var currentLetter = letters[currentLetterIndex];
+            var audioElement = document.getElementById("audio");
+            audioElement.src = "sounds/" + currentLetter + ".wav";
+            audioElement.play();
+        }
+
+        function nextLetter(event) {
+            event.stopPropagation();
+
+            currentLetterIndex++;
+            if (currentLetterIndex >= letters.length) {
+                currentLetterIndex = 0;
+                currentLetter = letters[0];
+                letterElement.textContent = currentLetter;
+                completionMessage.style.display = "block";
+                performAction();
+                setProgress();
+            }
+            var currentLetter = letters[currentLetterIndex];
+            letterElement.textContent = currentLetter;
+        }
+    </script>
+</body>
+</html>
