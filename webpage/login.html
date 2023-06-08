@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">   
     <title>Unii Learning Labs</title>
+    
     <style>
         body {
             background-image: url("images/background_animated.gif");
@@ -14,6 +17,8 @@
             font-family: 'DM Sans', sans-serif;
             
         }
+
+        /* LOGIN CONTAINER */
 
         div.loginSquare {
             position: absolute;
@@ -51,6 +56,8 @@
 
             color: #000000;
         }
+
+        /* LOGIN BUTTONS */
 
         button.login{
             position: absolute;
@@ -109,6 +116,8 @@
             color: #FFFFFF;
         }
 
+        /* LOGIN FIELDS */
+
         input.email{
             position: relative;
             left: 75px;
@@ -159,6 +168,13 @@
             color: black;
         }
 
+        ::placeholder {
+            padding: 0px 200px 0px 20px;
+
+        }
+
+        /* GO BACK TO LANDING PAGE BUTTON */
+        
         .link {
             position: absolute;
             width: 100%;
@@ -192,11 +208,6 @@
             padding-left: 5px;
         }
 
-        ::placeholder {
-            padding: 0px 200px 0px 20px;
-
-        }
-
 
     </style>
 </head>
@@ -213,7 +224,7 @@
             Welcome Back!
         </h1>
         <input class="email" type="text" placeholder="Email">
-        <input class="password" type="text" placeholder="Password">
+        <input class="password" type="password" placeholder="Password">
 
         <div class="remember">
             <input type="checkbox"> <label>Remember Me</label>
