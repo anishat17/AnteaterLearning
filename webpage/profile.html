@@ -1,164 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Background Picture Example</title>
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      min-height: 100vh;
-      background-image: url("images/background.png"); /* Replace "background-image.jpg" with the path to your desired background image */
-      background-size:  100% 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+    <title>Unii Learning Labs</title>
 
-    .container {
-      display: flex;
-      flex-grow: 1;
-    }
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">   
+    
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    .left-section {
-      background-color: rgba(136, 197, 255, 0);
-      width: 200px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-    }
+    <style>
+        body {
+            position: relative;
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
 
-    .main-content {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+            background-image: url("images/background.png");
+            background-size: cover;
+        }
 
-    .section-container {
-      background-color: #f2f2f2;
-      border-radius: 8px;
-      padding: 20px;
-      margin-top: 20px;
-      width: 80%;
-      height: 40%;
-    }
+        /* NAVIGATION SIDE BAR */
 
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
-    }
+        div.nav-menu {
 
-    .progress-container {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      align-items: center;
-    }
+            padding: 0px;
+            position: absolute; 
+            top: 20px;
+            left: 20px;
+            width: 300px;
+            height: 870px;
 
-    .progress-bar-container {
-      width: 200px;
-      height: 20px;
-      background-color: #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-    }
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
 
-    .progress-bar {
-      width: 0%; /* Set the desired progress width */
-      height: 100%;
-      background-color: green;
-    }
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
 
-    .progress-percentage {
-      font-size: 16px;
-      font-weight: bold;
-      margin-left: 10px;
-    }
+        a.page {
+            position: relative;
+            right: 10px;
+            display: inline-block;
+            
+            width: 200px;
+            height: 66px;
+            padding-left: 50px;
+            color: black;
+            text-align: left;
+            line-height: 65px;
+            margin: 10px;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: 700;
 
-    .main-sections {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
 
-    .main-section {
-      background-color: #f2f2f2;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 20px;
-      flex: 1 1 40%;
-      min-height: 200px;
-    }
+        }
 
-  </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var actionCompleted = localStorage.getItem('actionCompleted');
-      var actionCompleted1 = localStorage.getItem('actionCompleted1');
-      if (actionCompleted === 'true') {
-        document.getElementById('myImage').style.display = 'block';
-        //localStorage.removeItem('actionCompleted');
+        a.active-page {
+            background-color: #FF717F;
+            color: white;
+        }
 
-      }
-      if (actionCompleted1 === 'true')
-      {
-        document.getElementById('badge2').style.display = 'block';
-        //localStorage.removeItem('actionCompleted1');
-      }
-    });
-  </script>
+        a:hover:not(.active-page) {
+            background-color: #555;
+            color: white;
+        }
 
-</head>
-<body>
+        img.logo {
+            position: relative;
+            left: 65px;
+            padding: 20px;
+        }
 
-</body>
-<div class="container">
-    <div class="left-section">
-        <img src="images/logo.png" alt="Description of the image" style="width: 200px; height: auto;">
-        <p></p>
-        <a href="index.html" class="large-button1">Dashboard</a>
-        <a href="profile.html" class="large-button1">Profile</a>
-        <a href="settings.html" class="large-button1">Settings</a>
-        <a href="support.html" class="large-button1">Support</a>
-    </div>
+        /* MAIN PROFILE CONTENT */
 
-    <div class="main-content">
-        <p style="font-size: 40px;">Hello, <span id="name">John Doe</span>!</p>
-        <div class="main-sections">
-            <div class="main-section">
-                <h2>Your Unii Friend</h2>
-                <img src="images/friend.png" alt="Description of the image" style="width: 200px; height: auto;">
-                <!-- Add content here -->
-            </div>
-            <div class="main-section">
-                <h2>Badges</h2>
-                <img id="myImage" src="images/badge1.png" style="display: none;">
-                <img id="badge2" src="images/badge2.png" style="display: none;">
-                <!-- Add content here -->
-            </div>
-            <div class="main-section">
-                <h2>Progress Report</h2>
-                <!-- Add content here -->
-            </div>
-            <div class="main-section">
-                <h2>Achievements</h2>
-                <!-- Add content here -->
-            </div>
+        div.main-content {
+            position: relative;
+            left: 350px;
+            width: 1400px;
+            height: 870px;
+        }
+
+        div.unii-friend{
+            position: relative;
+            bottom: 5px;
+            width: 690px;
+            height: 470px;
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
+        }
+
+        div.badges {
+            position: relative;
+    
+            width: 690px;
+            height: 363px;
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
+        }
+
+        div.progress-report {
+            position: relative;
+            bottom: 890px;
+
+            left: 720px;    
+            width: 690px;
+            height: 100px;
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
+        }
+
+        div.daily-tasks {
+            position: relative;
+            bottom: 890px;
+
+            left: 720px;    
+            width: 690px;
+            height: 450px;
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
+        }
+
+        div.achievements {
+            position: relative;
+            bottom: 890px;
+
+            left: 720px;    
+            width: 690px;
+            height: 255px;
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 500;
+            padding-top: 20px;
+            padding-left: 30px;
+        }
+
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var actionCompleted = localStorage.getItem('actionCompleted');
+        var actionCompleted1 = localStorage.getItem('actionCompleted1');
+        if (actionCompleted === 'true') {
+            document.getElementById('badge1').style.display = 'block';
+            //localStorage.removeItem('actionCompleted');
+
+        }
+        if (actionCompleted1 === 'true')
+        {
+            document.getElementById('badge2').style.display = 'block';
+            //localStorage.removeItem('actionCompleted1');
+        }
+        });
+    </script>
+
+    </head>
+    <body>
+
+        <div class="nav-menu">
+            <img class="logo" src="images/logo_icon.svg" alt="Description of the image" style="width: 120px; height: auto;">
+            <a href="index.html" class="page">Dashboard</a>
+            <a href="profile.html" class="active-page page">Profile</a>
+            <a href="settings.html" class="page">Settings</a>
+            <a href="support.html" class="page">Support</a>
         </div>
-    </div>
-    <div class="progress-container">
-        <div class="progress-bar-container">
-            <div class="progress-bar"></div>
+        
+        <div class="main-content">
+
+            <div class="unii-friend">
+                <h1>Your Unii Friend</h1>
+            </div>
+
+            <div class="badges">
+                <h1>Badges</h1>
+                <img id="badge1" src="images/badge1.png" style="padding-left:40px; display: none;">
+                <img id="badge2" src="images/badge2.png" style="padding-left:40px; display: none;">
+            </div> 
+
+            <div class="progress-report">
+                <h1>Progress Report</h1>
+                <!-- Add content here -->
+            </div> 
+
+            <div class="daily-tasks">
+                <h1>Daily Tasks</h1>
+                <!-- Add content here -->
+            </div> 
+
+            <div class="achievements">
+                <h1>Achievements</h1>
+                <!-- Add content here -->
+            </div> 
+
         </div>
-        <span class="progress-percentage">0% Progress</span>
-    </div>
-    <!-- Page content goes here -->
-</div>
+    </body>
+
+    
 </html>
