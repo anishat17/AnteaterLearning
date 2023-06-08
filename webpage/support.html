@@ -1,106 +1,204 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Support</title>
+    <title>Unii Learning Labs</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">   
+    
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
         body {
-            background-color: tan;
+            position: relative;
+            font-family: 'DM Sans', sans-serif;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        
-        .header {
             display: flex;
-            align-items: center;
-            background-color: #f2f2f2;
-            padding: 10px;
-            justify-content: space-between;
+            min-height: 100vh;
+
+            background-image: url("images/background.png");
+            background-size: cover;
         }
-        
-        .go-back-button {
-            background-color: blue;
-            color: white;
-            padding: 10px 20px;
+
+        /* NAVIGATION SIDE BAR */
+
+        div.nav-menu {
+
+            padding: 0px;
+            position: absolute; 
+            top: 20px;
+            left: 20px;
+            width: 300px;
+            height: 870px;
+
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+
+        a.page {
+            position: relative;
+            right: 10px;
+            display: inline-block;
+            
+            width: 200px;
+            height: 66px;
+            padding-left: 50px;
+            color: black;
+            text-align: left;
+            line-height: 65px;
+            margin: 10px;
             text-decoration: none;
+            font-size: 30px;
+            font-weight: 700;
+
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+
         }
-        
-        .title {
-            font-size: 24px;
-            font-weight: bold;
-            margin: 0;
-            flex-grow: 1;
-            text-align: center;
+
+        a.active-page {
+            background-color: #FF717F;
+            color: white;
         }
-        
-        .support-form {
-            background-color: #fff;
+
+        a:hover:not(.active-page) {
+            background-color: #88C5FF;
+            color: white;
+        }
+
+        a.coming-soon:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        img.logo {
+            position: relative;
+            left: 65px;
             padding: 20px;
-            margin: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
-        .form-group {
-            margin-bottom: 20px;
+
+        /* MAIN DASHBOARD CONTENT */
+        div.main-content {
+            position: relative;
+            top: 20px;
+            left: 350px;
+            width: 1400px;
+            height: 870px;
+
+
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
+
+            overflow-y: scroll;
         }
-        
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
+
+        h1 {
+            position: relative;
+            bottom: 20px;
+            left: 20px;
+            font-size: 40px;
+            font-weight: 500;
+            text-align: left;
         }
-        
-        .form-group input[type="text"],
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+
+        p {
+            position: relative;
+            left: 20px;
+            bottom: 20px;
+            font-size: 24px;
+            font-weight: 400;
+            text-align: left;
         }
-        
-        .form-group textarea {
-            height: 100px;
+
+        h2 {
+            position: relative;
+            bottom: 30px;
+            left: 20px;
+            font-size: 30px;
+            font-weight: 500;
+            text-align: left;
+            margin: 0px;
         }
-        
-        .button {
-            background-color: #4CAF50;
+
+        input.name {
+            position: relative;
+            bottom: 30px;
+            left: 20px;
+            width: 500px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 32px;
+        }
+
+        textarea.form {
+            position: relative;
+            bottom: 30px;
+            left: 20px;
+            height: 300px;
+            font-size: 32px;
+            border-radius: 10px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+        }
+        a.submit {
+            position: relative;
+            top: 20px;
+            right: 450px;
+            background-color: #9FD5A5;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 30px;
+            border: none;
+            font-weight: 500;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 24px;
         }
-        
-        .button:hover {
-            background-color: #45a049;
-        }
+
     </style>
-</head>
-<body>
-    <div class="header">
-        <a href="index.html" class="go-back-button">Go Back Home</a>
-        <h1 class="title">Support</h1>
-    </div>
+    </head>
+    <body>
+
+        <div class="nav-menu">
+            <img class="logo" src="images/logo_icon.svg" alt="Description of the image" style="width: 120px; height: auto;">
+            <a href="index.html" class="page">Dashboard</a>
+            <a href="profile.html" class="page">Profile</a>
+            <a href="settings.html" class="page">Settings</a>
+            <a href="support.html" class="active-page page">Support</a>
+            <a href="login.html" class="page">Log Out</a>
+        </div>
+        
+        <div class="main-content">
+            <h1>Contact Our Team</h1>
+            <p>We would love to hear from you!</p>
+
+            <h2>First Name</h2>
+            <input class="name" type="text">
+
+            <h2>Last Name</h2>
+            <input class="name" type="text">
+
+            <h2>Email</h2>
+            <input class="name" type="text"> <br>
+
+            <h2>Message</h2>
+            <textarea class="form" rows="0" cols="50"></textarea>
+
+            <a href="" class="submit">Submit</a>
+
+        </div>
+    </body>
+
     
-    <div class="support-form">
-        <h2>Contact Us</h2>
-        <form>
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
-            </div>
-            <button type="submit" class="button">Submit</button>
-        </form>
-    </div>
-    
-    <!-- Rest of your webpage content goes here -->
-</body>
 </html>

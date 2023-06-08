@@ -1,148 +1,146 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Settings</title>
+    <title>Unii Learning Labs</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">   
+    
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
         body {
-            background-color: tan;
+            position: relative;
+            font-family: 'DM Sans', sans-serif;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        
-        .header {
             display: flex;
-            align-items: center;
-            background-color: #f2f2f2;
-            padding: 10px;
-            justify-content: space-between;
+            min-height: 100vh;
+
+            background-image: url("images/background.png");
+            background-size: cover;
         }
-        
-        .go-back-button {
-            background-color: blue;
-            color: white;
-            padding: 10px 20px;
+
+        /* NAVIGATION SIDE BAR */
+
+        div.nav-menu {
+
+            padding: 0px;
+            position: absolute; 
+            top: 20px;
+            left: 20px;
+            width: 300px;
+            height: 870px;
+
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+
+        a.page {
+            position: relative;
+            right: 10px;
+            display: inline-block;
+            
+            width: 200px;
+            height: 66px;
+            padding-left: 50px;
+            color: black;
+            text-align: left;
+            line-height: 65px;
+            margin: 10px;
             text-decoration: none;
+            font-size: 30px;
+            font-weight: 700;
+
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+
         }
-        
-        .title {
-            font-size: 24px;
-            font-weight: bold;
-            margin: 0;
-            flex-grow: 1;
-            text-align: center;
+
+        a.active-page {
+            background-color: #FF717F;
+            color: white;
         }
-        
-        .settings-section {
-            background-color: #fff;
+
+        a:hover:not(.active-page) {
+            background-color: #88C5FF;
+            color: white;
+        }
+
+        a.coming-soon:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        img.logo {
+            position: relative;
+            left: 65px;
             padding: 20px;
-            margin: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
-        .section-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 0;
-            margin-bottom: 10px;
+
+        /* MAIN DASHBOARD CONTENT */
+        div.container {
+            position: relative;
+            top: 20px;
+            left: 350px;
+            width: 1400px;
+            height: 870px;
+
         }
-        
-        .section-content {
+
+        div.card {
+
+            width: 1400px;
+            height: 400px;
+            margin-top: 20px;
             margin-bottom: 20px;
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
         }
-        
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
+
+        h1 {
+            position: relative;
+            top: 10px;
+            left: 20px;
+            font-size: 40px;
+            font-weight: 500;
+            text-align: left;
         }
-        
-        .button:hover {
-            background-color: #45a049;
-        }
+
     </style>
-</head>
-<body>
-    <div class="header">
-        <a href="index.html" class="go-back-button">Go Back Home</a>
-        <h1 class="title">Settings</h1>
-    </div>
-    
-    <div class="settings-section">
-        <h2 class="section-title">General Settings</h2>
-        <div class="section-content">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username">
-            
-            <br><br>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email address">
-            
-            <br><br>
-            
-            <label for="notifications">Enable Notifications:</label>
-            <input type="checkbox" id="notifications" name="notifications">
-            <label for="notifications">Receive email notifications</label>
+    </head>
+    <body>
+
+        <div class="nav-menu">
+            <img class="logo" src="images/logo_icon.svg" alt="Description of the image" style="width: 120px; height: auto;">
+            <a href="index.html" class="page">Dashboard</a>
+            <a href="profile.html" class="page">Profile</a>
+            <a href="settings.html" class="active-page page">Settings</a>
+            <a href="support.html" class="page">Support</a>
+            <a href="login.html" class="page">Log Out</a>
         </div>
-        <button class="button">Save Changes</button>
-    </div>
-    
-    <div class="settings-section">
-        <h2 class="section-title">Account Settings</h2>
-        <div class="section-content">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password">
-            
-            <br><br>
-            
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
-            
-            <br><br>
-            
-            <label for="avatar">Profile Picture:</label>
-            <input type="file" id="avatar" name="avatar">
+        
+        <div class="container">
+            <div class="card">
+                <h1>General Settings</h1>
+            </div>
+
+            <div class="card">
+                <h1>Account Settings</h1>
+            </div>
+
         </div>
-        <button class="button">Save Changes</button>
-    </div>
+    </body>
+
     
-    <div class="settings-section">
-        <h2 class="section-title">Privacy Settings</h2>
-        <div class="section-content">
-            <label for="public-profile">Public Profile:</label>
-            <input type="checkbox" id="public-profile" name="public-profile">
-            <label for="public-profile">Make my profile public</label>
-            
-            <br><br>
-            
-            <label for="data-sharing">Data Sharing:</label>
-            <input type="checkbox" id="data-sharing" name="data-sharing">
-            <label for="data-sharing">Allow data sharing with partners</label>
-        </div>
-        <button class="button">Save Changes</button>
-    </div>
-    
-    <div class="settings-section">
-        <h2 class="section-title">Notification Settings</h2>
-        <div class="section-content">
-            <label for="email-notifications">Email Notifications:</label>
-            <input type="checkbox" id="email-notifications" name="email-notifications">
-            <label for="email-notifications">Receive email notifications</label>
-            
-            <br><br>
-            
-            <label for="push-notifications">Push Notifications:</label>
-            <input type="checkbox" id="push-notifications" name="push-notifications">
-            <label for="push-notifications">Receive push notifications</label>
-        </div>
-        <button class="button">Save Changes</button>
-    </div>
-    
-    <!-- Add more settings sections if needed -->
-    
-</body>
 </html>
