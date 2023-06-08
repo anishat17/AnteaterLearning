@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Webpage</title>
+    <title>Learn English</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">   
+    
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
         
         body {
-            background-color: tan;
+            background-color: #AC9AF4;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'DM Sans', sans-serif;
         }
         
         .header {
             display: flex;
             align-items: center;
-            background-color: #f2f2f2;
             padding: 10px;
             justify-content: space-between;
         }
         
-        .go-back-button {
-            background-color: blue;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-        }
-        
         .title {
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 60px;
+            font-weight: 500;
             margin: 0;
         }
         
         .progress-bar-container {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        width: 20%;
-        height: 10px;
-        background-color: #ddd;
-        border-radius: 10px;
-        overflow: hidden;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 20%;
+            height: 10px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
         }
 
         .progress-bar {
@@ -59,81 +61,104 @@
             display: flex;
             align-items: center;
         }
-            
-        .button-container {
+
+        
+        .go-back-button {
+            position: relative;
+            left: 50px;
+            background-color: #88C5FF;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 30px;
+
+            font-weight: 500;
+            font-size: 24px;
+        }
+
+        .container {
+            width: 1770px;
+            height: 780px;
+            margin: 10px;
+            /*outline: solid 1px black;*/
+            display: flex;
+            justify-content: center;
+        }
+
+        div.main-content {
+            position: relative;
+            width: 1700px;
+            height: 780px;
+            background-color: #E0D9FC;
+            border-radius: 40px;
+
+            overflow-y: scroll;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
+
         }
-        
-        .button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 200px;
-            height: 200px;
-            background-color: #f2f2f2;
-            border-radius: 10px;
-            margin: 10px;
+
+        div.task-card {
+            width: 273px;
+            height: 273px;
+            margin-top: 27px;
+            margin-bottom: 27px;
+            margin-left: 55px;
+            background-color: white;
+            box-shadow: 4px 4px 0px #A5A5A5;
+            border-radius: 20px
+        }
+
+        h2 {
             position: relative;
-        }
-        .button.done:before {
-            content: '\f023'; /* Lock symbol (FontAwesome) */
-            background-image: url("images/percent.png"); /* Path to your image */
-            background-size: small;
-            background-position: right;
-            background-repeat: no-repeat;
-            font-family: 'FontAwesome';
-            font-size: 32px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            color: transparent;
-        }
-        
-        .button.locked:before {
-            content: '\f023'; /* Lock symbol (FontAwesome) */
-            background-image: url("images/Lock.png"); /* Path to your image */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            font-family: 'FontAwesome';
-            font-size: 32px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            color: transparent;
-        }
-        
-        .button.completed:before {
-            content: '\f005'; /* Star symbol (FontAwesome) */
-            font-family: 'FontAwesome';
-            font-size: 32px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            color: gold;
+            bottom: 30px;
+            font-size: 50px;
+            font-weight: 500;
+            padding-left: 20px;
+            
         }
 
-        .button .image-container {
-            position: absolute;
-            top: -10px;
-            right: 5px;
-            width: 80px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        h3 {
+            position: relative;
+            top: 70px;
+            font-size: 30px;
+            font-weight: 500;
+            text-align: center;
+            
         }
 
-        /* Styles for the image */
-        .button .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+        img.star {
+            position: absolute;
+            bottom: 670px;
+            left: 240px;
         }
+
+        img.bar {
+            position: absolute;
+            top: 60px;
+            left: 180px;
+        }
+
+        a.activity {
+            position: relative;
+            bottom: 9px;
+            text-decoration: none;
+            color: black;
+        }
+
+        h2.activity {
+            position: relative;
+            top: 9px;
+        }
+
+        h3.activity {
+            position: relative;
+            top: 108px;
+        }
+
+
     </style>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
         var prog = localStorage.getItem('progress');
@@ -152,11 +177,12 @@
     });
 
     </script>
+
 </head>
 <body>
     <div class="header">
         <a href="index.html" class="go-back-button">Go Back Home</a>
-        <h1 class="title">ENGLISH</h1>
+        <h1 class="title">English</h1>
         <div class="progress-container">
             <div class="progress-bar-container">
                 <div class="progress-bar"></div>
@@ -164,76 +190,110 @@
             <span class="progress-percentage">0% Progress</span>
         </div>
     </div>
-    
-    <div class="button-container">
-        <a href="english_letter.html">
-            <div class="button">
-                <div class="image-container">
-                    <img id="lnotdone" src = "images/percent.png" style="display: block;">
+
+    <div class="container">
+        <div class="main-content">
+            
+            <a class="activity" href="english_letter.html">
+                <div class="task-card">
+                    <h2 class="activity">1</h2>
+                    <img class=bar id="lnotdone" src = "images/percent.png" style="display: block;">
+                    <img class=star id="d" src="images/star.png" style="display: none;">
+                    <h3 class="activity">Learn: A - F</h3>
+                    
                 </div>
-                <div class="image-container">
-                    <img id="ldone" src="images/star.png" style="display: none;">
+            </a>
+            
+            <a class="activity" href="english_letter_blend.html" >
+                <div class="task-card">
+                    <h2 class="activity">2</h2>
+                    <img class=bar id="lnotdone" src = "images/percent.png" style="display: block;">
+                    <img class=star id="d" src="images/star.png" style="display: none;">
+                    <h3 class="activity">Learn: G - L</h3>
                 </div>
+            </a>
+
+            <div class="task-card">
+                <h2>3</h2>
+                <h3>Learn: M - R</h3>
                 
-                Letter Sounds
             </div>
-        </a>
-        <a href="english_letter_blend.html">
-            <div class="button">
-                <div class="image-container">
-                    <img id="nd"src = "images/percent.png" style="display: block;">
-                </div>
-                <div class="image-container">
-                    <img id="d" src="images/star.png" style="display: none;">
-                </div>
-                Letter Blends
+
+            <div class="task-card">
+                <h2>4</h2>
+                <h3>Learn: S - Z</h3>
+                
             </div>
-        </a>
-        <div class="button">
-                <div class="image-container">
-                    <img src = "images/percent.png" style="display: block;">
-                </div>
-                <div class="image-container">
-                    <img id="myImage" src="images/badge1.png" style="display: none;">
-                </div>
-            Task 3
+
+            <div class="task-card">
+                <h2>5</h2>
+                <h3>Review: A - Z</h3>
+                
+            </div>
+
+            <div class="task-card">
+                <h2>6</h2>
+                <h3>Learn: b - g</h3>
+                
+            </div>
+
+            <div class="task-card">
+                <h2>7</h2>
+                <h3>Learn: h - m</h3>
+                
+            </div>
+
+            <div class="task-card">
+                <h2>8</h2>
+                <h3>Learn: n - s</h3>
+                
+            </div>
+
+            <div class="task-card">
+                <h2>9</h2>
+                <h3>Learn: t - z</h3>
+                
+            </div>
+
+            <div class="task-card">
+                <h2>10</h2>
+                <h3>Learn: b - z</h3>
+                
+            </div>
+
+            <div class="task-card">
+                <h2>11</h2>
+                <h3>Learn: Words</h3>
+                
+            </div>
+
+            <div class="task-card">
+                <h2>12</h2>
+                <h3>Quick Draw</h3>
+                
+            </div>
+
+            <div class="task-card">
+                <h2>13</h2>
+               
+            </div>
+
+            <div class="task-card">
+                <h2>14</h2>
+                
+            </div>
+
+            <div class="task-card">
+                <h2>15</h2>
+                
+            </div>
+
+            
+            
         </div>
-        <div class="button locked">
-            Task 4
-        </div>
-        <div class="button locked">
-            Task 5
-        </div>
-        <div class="button locked">
-            Task 6
-        </div>
-        <div class="button locked">
-            Task 7
-        </div>
-        <div class="button locked">
-            Task 8
-        </div>
-        <div class="button locked">
-            Task 6
-        </div>
-        <div class="button locked">
-            Task 9
-        </div>
-        <div class="button locked">
-            Task 10
-        </div>
-        <div class="button locked">
-            Task 11
-        </div>
-        <div class="button locked">
-            Task 12
-        </div>
-        <div class="button locked">
-            Task 13
-        </div>
-        <div class="button locked">
-            Task 14
-        </div>
+
     </div>
+    
+
 </body>
 </html>
