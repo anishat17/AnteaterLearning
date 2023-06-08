@@ -129,21 +129,20 @@
     <div class="container">
         <div class="flashcard" onclick="playSound(event)">
             <div class="flashcard-text">
-                <span id="letter">ar</span>
+                <span id="letter">a</span>
             </div>
             <div class="flashcard-next">
                 <a href="#" class="flashcard-next-button" onclick="nextLetter(event)">Next</a>
             </div>
         </div>
 
-        <div id="completionMessage" class="completion-message">Good job! You have completed the letter sounds activity!</div>
+        <div id="completionMessage" class="completion-message">Good job! You have completed the letters A to F!</div>
 
         <audio id="audio"></audio>
     
     <script>
         var currentLetterIndex = 0;
-        //var letters = "abcdefghijklmnopqrstuvwxyz";
-        var letters = ["ar", "er", "ir", "ur", "or", "ow", "ou", "oi", "oy", "ea", "ee", "ie", "oe", "ai", "ay", "au", "aw", "ew", "ui", "eu"]
+        var letters = "abcdef";
         var letterElement = document.getElementById("letter");
         var completionMessage = document.getElementById("completionMessage");
 
