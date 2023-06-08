@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">   
     <title>Unii Learning Labs</title>
     <style>
         body {
+            background-image: url("images/background_animated.gif");
+            animation-direction: alternate; 
+            background-repeat: repeat;
             background-color: #D3E9FF;
+            font-family: 'DM Sans', sans-serif;
+            
         }
 
         div.loginSquare {
@@ -16,7 +24,7 @@
             right: 0px;
             bottom: 100px;
             margin: auto;
-
+            
             background: #F7F8FC;
             box-shadow: 10px 17px 0px #E3E3E3;
             border-radius: 30px;
@@ -24,9 +32,7 @@
 
         div.loginSquare h1 {
             position: center;
-            
-            font-family: 'Open Sans';
-            font-style: normal;
+
             font-weight: 700;
             font-size: 48px;
             line-height: 83px;
@@ -37,9 +43,8 @@
 
         div.loginSquare p {
             position: center;
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: 500;
+            
+            font-weight: 400;
             font-size: 32px;
             line-height: 42px;
             text-align: center;
@@ -64,8 +69,7 @@
             border-radius: 30px;
             border: 0mm;
 
-            font-family: 'Open Sans';
-            font-style: normal;
+            
             font-weight: 700;
             font-size: 24px;
             line-height: 22px;
@@ -93,9 +97,7 @@
             box-shadow: 0px 6px 0px #88A2D3;
             border-radius: 30px;
             border: 0mm;
-
-            font-family: 'Open Sans';
-            font-style: normal;
+            
             font-weight: 700;
             font-size: 24px;
             line-height: 22px;
@@ -108,20 +110,18 @@
         }
 
         input.email{
-            position: absolute;
+            position: relative;
             left: 75px;
+            bottom: 15spx;
             width: 400px;
             height: 60px;
-            padding: 0px 10px 0px 10px;
 
             background: #ffffff;
             box-shadow: 0px 6px 0px #D9D9D9;
             border-radius: 30px;
             border: 0mm;
 
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: 700;
+            font-weight: 400;
             font-size: 24px;
             line-height: 22px;
         }
@@ -129,22 +129,39 @@
         input.password{
             position: relative;
             left: 75px;
-            top: 80px;
+            top: 20px;
             
             width: 400px;
             height: 60px;
-            padding: 0px 10px 0px 10px;
 
             background: #ffffff;
             box-shadow: 0px 6px 0px #D9D9D9;
             border-radius: 30px;
             border: 0mm;
 
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: 700;
+            font-weight: 400;
             font-size: 24px;
             line-height: 22px;
+        }
+
+        div.remember {
+            position: relative;
+            left: 80px;
+            top: 35px;
+
+            font-weight: 400;
+            font-size: 18px;
+        }
+        
+        a.forgotpass{
+            position: relative;
+            left: 90px;
+            color: black;
+        }
+
+        ::placeholder {
+            padding: 0px 200px 0px 20px;
+
         }
 
 
@@ -152,18 +169,24 @@
 </head>
 <body>
     <div class="loginSquare">
-        <h1>
+        <h1 class="header1">
             Welcome Back!
         </h1>
         <input class="email" type="text" placeholder="Email">
         <input class="password" type="text" placeholder="Password">
+
+        <div class="remember">
+            <input type="checkbox"> <label>Remember Me</label>
+
+            <a class="forgotpass" href="" target="_blank">Forgot Password?</a>
+        </div>
 
         <a href="index.html">
             <button class="login">Login</button>
         </a>
         
         <a href="index.html">
-            <button class="signup">Signup</button>
+            <button class="signup">Sign Up</button>
         </a>
 
 
