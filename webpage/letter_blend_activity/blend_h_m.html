@@ -129,7 +129,7 @@
     <div class="container">
         <div class="flashcard" onclick="playSound(event)">
             <div class="flashcard-text">
-                <span id="letter">ar</span>
+                <span id="letter">ha</span>
             </div>
             <div class="flashcard-next">
                 <a href="#" class="flashcard-next-button" onclick="nextLetter(event)">Next</a>
@@ -143,19 +143,9 @@
     <script>
         var currentLetterIndex = 0;
         //var letters = "abcdefghijklmnopqrstuvwxyz";
-        var letters = ["ba", "be", "bi", "bo", "bu", "ca", "ce", "ci",
-                        "co", "cu", "da", "de", "di", "do", "du", 
-                        "fa", "fe", "fi", "fo", "fu", "ga", "ge", "gi", "go", "gu",
-                        "ha", "he", "hi", "ho", "hu", "ja", "je", "ji",
+        var letters = ["ha", "he", "hi", "ho", "hu", "ja", "je", "ji",
                         "jo", "ju", "ka", "ke", "ki", "ko", "ku", 
-                        "la", "le", "li", "lo", "lu", "ma", "me", "mi", "mo", "mu",
-                        "na", "ne", "ni", "no", "nu", "pa", "pe", "pi",
-                        "po", "pu", "qa", "qe", "qi", "qo", "qu", 
-                        "ra", "re", "ri", "ro", "ru", "sa", "se", "si", "so", "su",
-                        "ta", "te", "ti", "to", "tu", "va", "ve", "vi",
-                        "vo", "vu", "wa", "we", "wi", "wo", "wu", 
-                        "xa", "xe", "xi", "xo", "xu", "ya", "ye", "yi", "yo", "yu",
-                        "za", "ze", "zi", "zo", "zu"]
+                        "la", "le", "li", "lo", "lu", "ma", "me", "mi", "mo", "mu"]
         var letterElement = document.getElementById("letter");
         var completionMessage = document.getElementById("completionMessage");
 
