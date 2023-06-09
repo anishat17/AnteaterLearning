@@ -152,6 +152,39 @@
             font-weight: 500;
             padding-top: 20px;
             padding-left: 30px;
+    
+        }
+
+        label {
+            font-size: 30px;
+            display: block;
+            padding-left: 15px;
+            text-indent: -15px;
+        }
+
+        input.checktask {
+            position: relative;
+            width: 34px;
+            height: 34px;
+            padding-left: 0;
+            margin-left: 30px;
+            margin-right: 20px;
+            vertical-align: bottom;
+            position: relative;
+            top: -1px;
+            
+        }
+
+        img.star {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            padding-left: 0;
+            margin-left: 30px;
+            margin-right: 20px;
+            vertical-align: bottom;
+            position: relative;
+            top: -1px;
         }
 
     </style>
@@ -188,7 +221,9 @@
         <div class="main-content">
 
             <div class="unii-friend">
-                <h1>Your Unii Friend</h1>
+                <h1>Your Unii Friend</h1><br>
+                <img src="\webpage\images\friend.png">
+
             </div>
 
             <div class="badges">
@@ -205,11 +240,18 @@
             <div class="daily-tasks">
                 <h1>Daily Tasks</h1>
                 <!-- Add content here -->
+                <label><input class="checktask" type="checkbox">Say “Hello” to your Unii Friend!</label> <br>
+                <label><input class="checktask" type="checkbox">Complete 2 Learning exercises!</label> <br>
+                <label><input class="checktask" type="checkbox">Complete 1 Review!</label> <br>
+                <label><input class="checktask" type="checkbox">Earn a Badge!</label> <br>       
+                
             </div> 
 
             <div class="achievements">
                 <h1>Achievements</h1>
-                <!-- Add content here -->
+                <label><img class="star" src="\webpage\images\star.png">Earn a Badge!</label> <br> 
+                <label><img class="star" src="\webpage\images\star.png">10 day Streak!</label> <br>       
+                
             </div> 
 
         </div>
