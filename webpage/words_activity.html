@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Letter Sounds</title>
+    <title>Word Activity</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">   
+    
+    <link rel="stylesheet" href="\webpage\style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
         body {
-            background-image: url("/webpage/images/Blocks.png");
-            background-color: #EBF5FF;
+            background-image: url("/webpage/images/background3.png");
+            background-color: #DCF9DF;
             background-size: cover;
             background-repeat: no-repeat;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            
+            font-family: "DM Sans", "sans-serif";
+            font-weight: 700;
         }
         
         .header {
@@ -57,14 +69,13 @@
             margin: auto;
             box-shadow: 0px 10px 0px #B3A2FA;
             border: solid 20px #E0D9FC;
-            
-            
+
         }
 
         .flashcard-text {
             color: #FF9AA4;
             text-shadow: 0px 4px 0px #FF717F;
-            font-size: 500px;
+            font-size: 300px;
             text-align: center;
             display: flex;
             align-items: center;
@@ -73,23 +84,15 @@
         }
 
         .flashcard-next {
+            position: relative;
+            top: 30px;
             display: flex;
             justify-content: right;
             align-items: flex-end;
             width: 100%;
             margin-top: auto;
         }
-
-        .flashcard-next-button {
-            background-color: #FE727F;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 16px;
-            box-shadow: 0px 4px 0px #C93E4C;
-            text-decoration: none;
-            font-size: 32px;
-        }
-
+        
         .completion-message {
             display: none;
             text-align: center;
@@ -113,11 +116,11 @@
     <script>
         function performAction() {
           // Store the flag indicating the action has occurred in localStorage
-          localStorage.setItem('actionCompleted', 'true');
+          localStorage.setItem('actionCompleted10', 'true');
         }
         function setProgress()
             {
-            localStorage.setItem('progress', 'true');
+            localStorage.setItem('progress10', 'true');
             }
       </script>
 </head>
@@ -129,21 +132,21 @@
     <div class="container">
         <div class="flashcard" onclick="playSound(event)">
             <div class="flashcard-text">
-                <span id="letter">ar</span>
+                <span id="letter">b + all</span>
             </div>
             <div class="flashcard-next">
                 <a href="#" class="flashcard-next-button" onclick="nextLetter(event)">Next</a>
             </div>
         </div>
 
-        <div id="completionMessage" class="completion-message">Good job! You have completed the letter sounds activity!</div>
+        <div id="completionMessage" class="completion-message">Good job! You have completed the words activity!</div>
 
         <audio id="audio"></audio>
     
     <script>
         var currentLetterIndex = 0;
         //var letters = "abcdefghijklmnopqrstuvwxyz";
-        var letters = ["ar", "er", "ir", "ur", "or", "ow", "ou", "oi", "oy", "ea", "ee", "ie", "oe", "ai", "ay", "au", "aw", "ew", "ui", "eu"]
+        var letters = ["b + all", "ball"]
         var letterElement = document.getElementById("letter");
         var completionMessage = document.getElementById("completionMessage");
 

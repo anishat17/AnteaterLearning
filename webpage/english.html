@@ -175,6 +175,7 @@
         var prog7 = localStorage.getItem('progress7');
         var prog8 = localStorage.getItem('progress8');
         var prog9 = localStorage.getItem('progress9');
+        var prog10 = localStorage.getItem('progress10');
 
         if (prog === 'true') {
             document.getElementById('ldone').style.display = 'block';
@@ -234,6 +235,12 @@
             document.getElementById('s9').style.display = 'block';
             document.getElementById('p9').style.display = 'none';
             localStorage.removeItem('progress9');
+        }
+        if (prog10 === 'true')
+        {
+            document.getElementById('s10').style.display = 'block';
+            document.getElementById('p10').style.display = 'none';
+            localStorage.removeItem('progress10');
         }
     });
 
@@ -354,11 +361,15 @@
                 </div>
             </a>
 
-            <div class="task-card">
-                <h2>11</h2>
-                <h3>Learn: Words</h3>
-                
-            </div>
+            <a class="activity" href="words_activity.html" >
+                <div class="task-card">
+                    <h2 class="activity">11</h2>
+                    <img class=bar id="p10" src = "images/percent.png" style="display: block;">
+                    <img class=bar id="s10" src="images/star.png" style="display: none;">
+                    <h3 class="activity">Learn Words</h3>
+                    
+                </div>
+            </a>
 
             <div class="task-card">
                 <h2>12</h2>
