@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">   
+    <title>Unii Learning Labs</title>
+    
+    <style>
+        body {
+            background-image: url("images/background_animated.gif");
+            animation-direction: alternate; 
+            background-repeat: repeat;
+            background-color: #D3E9FF;
+            font-family: 'DM Sans', sans-serif;
+            
+        }
+
+        /* LOGIN CONTAINER */
+
+        div.loginSquare {
+            position: absolute;
+            width: 550px;
+            height: 565px;
+            top: 10%;
+            left: 0px;
+            right: 0px;
+            bottom: 100px;
+            margin: auto;
+            
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
+        }
+
+        div.loginSquare h1 {
+            position: center;
+
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 83px;
+            text-align: center;
+
+            color: #000000;
+        }
+
+        div.loginSquare p {
+            position: center;
+            
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 42px;
+            text-align: center;
+
+            color: #000000;
+        }
+
+        /* LOGIN BUTTONS */
+
+        button.login{
+            position: absolute;
+            width: 400px;
+            height: 60px;
+            left: 75px;
+            top: 61%;
+
+            flex-direction: row;
+            align-items: center;
+            padding: 10px 20px;
+            gap: 10px;
+
+            background: #FF717F;
+            box-shadow: 0px 4px 0px #C93E4C;
+            border-radius: 30px;
+            border: 0mm;
+
+            
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 22px;
+
+            margin: 0;
+            text-align: center;
+            letter-spacing: 0.1px;
+
+            color: #FFFFFF;
+        }
+
+        button.signup{
+            position: absolute;
+            width: 400px;
+            height: 60px;
+            left: 75px;
+            top: 75%;
+
+            flex-direction: row;
+            align-items: center;
+            padding: 10px 20px;
+            gap: 10px;
+
+            background: #99B7F0;
+            box-shadow: 0px 4px 0px #88A2D3;
+            border-radius: 30px;
+            border: 0mm;
+            
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 22px;
+
+            margin: 0;
+            text-align: center;
+            letter-spacing: 0.1px;
+
+            color: #FFFFFF;
+        }
+
+        /* LOGIN FIELDS */
+
+        input.email{
+            position: relative;
+            left: 75px;
+            bottom: 15spx;
+            width: 400px;
+            height: 60px;
+
+            background: #ffffff;
+            box-shadow: 0px 4px 0px #D9D9D9;
+            border-radius: 30px;
+            border: 0mm;
+
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 22px;
+        }
+
+        input.password{
+            position: relative;
+            left: 75px;
+            top: 20px;
+            
+            width: 400px;
+            height: 60px;
+
+            background: #ffffff;
+            box-shadow: 0px 4px 0px #D9D9D9;
+            border-radius: 30px;
+            border: 0mm;
+
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 22px;
+        }
+
+        div.remember {
+            position: relative;
+            left: 80px;
+            top: 35px;
+
+            font-weight: 400;
+            font-size: 18px;
+        }
+        
+        a.forgotpass{
+            position: relative;
+            left: 90px;
+            color: black;
+        }
+
+        ::placeholder {
+            padding: 0px 200px 0px 20px;
+
+        }
+
+        /* GO BACK TO LANDING PAGE BUTTON */
+        
+        .link {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .goBackLandingSquare {
+            width: 200px;
+            height: 80px;
+            
+            background: white;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 20px;
+        }
+
+        .backarrow {
+            position: relative;
+            width: 50px;
+            height: 50;
+            padding: 10px;
+        }
+
+        .logo {
+            position: relative;
+            width: 100px;
+            height: 52;
+            padding-bottom: 7px;
+            padding-left: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <a href="https://unii-learning.webflow.io/">
+        <div class="goBackLandingSquare">
+            <img class="backarrow" src="images/Polygon-10.svg">
+            <img class="logo" src="images/logo_icon.svg">
+        </div>
+    </a>
+
+    <div class="loginSquare">
+        <h1 class="header1">
+            Welcome Back!
+        </h1>
+        <input class="email" type="text" placeholder="Email">
+        <input class="password" type="password" placeholder="Password">
+
+        <div class="remember">
+            <label><input type="checkbox"> Remember Me</label>
+
+            <a class="forgotpass" href="" target="_self">Forgot Password?</a>
+        </div>
+
+        <a href="index.html">
+            <button class="login">Login</button>
+        </a>
+        
+        <a href="index.html">
+            <button class="signup">Sign Up</button>
+        </a>
+
+
+    </div>
+    
+</body>
+</html>

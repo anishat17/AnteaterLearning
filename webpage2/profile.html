@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unii Learning Labs</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">   
+    
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            position: relative;
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+
+            background-image: url("images/background.png");
+            background-size: cover;
+        }
+
+        /* NAVIGATION SIDE BAR */
+
+        div.nav-menu {
+
+            padding: 0px;
+            position: absolute; 
+            top: 20px;
+            left: 20px;
+            width: 300px;
+            height: 870px;
+
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+
+        a.page {
+            position: relative;
+            right: 10px;
+            display: inline-block;
+            
+            width: 200px;
+            height: 66px;
+            padding-left: 50px;
+            color: black;
+            text-align: left;
+            line-height: 65px;
+            margin: 10px;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: 700;
+
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+
+        }
+
+        a.active-page {
+            background-color: #FF717F;
+            color: white;
+        }
+
+        a:hover:not(.active-page) {
+            background-color: #88C5FF;
+            color: white;
+        }
+
+        img.logo {
+            position: relative;
+            left: 65px;
+            padding: 20px;
+        }
+
+        a.report {
+            color: black;
+        }
+
+        a.report:hover {
+            color: #99B7F0;
+        }
+
+        /* MAIN PROFILE CONTENT */
+
+        div.main-content {
+            position: relative;
+            left: 350px;
+            width: 1400px;
+            height: 870px;
+        }
+
+        div.unii-friend{
+            position: relative;
+            bottom: 5px;
+            width: 690px;
+            height: 470px;
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
+        }
+
+        div.badges {
+            position: relative;
+    
+            width: 690px;
+            height: 363px;
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
+        }
+
+        div.progress-report {
+            position: relative;
+            bottom: 890px;
+
+            left: 720px;    
+            width: 690px;
+            height: 100px;
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
+        }
+
+        div.daily-tasks {
+            position: relative;
+            bottom: 890px;
+
+            left: 720px;    
+            width: 690px;
+            height: 450px;
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
+        }
+
+        div.achievements {
+            position: relative;
+            bottom: 890px;
+
+            left: 720px;    
+            width: 690px;
+            height: 255px;
+            background: #F7F8FC;
+            box-shadow: 4px 4px 0px #E3E3E3;
+            border-radius: 30px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 500;
+            padding-top: 20px;
+            padding-left: 30px;
+    
+        }
+
+        label {
+            font-size: 30px;
+            display: block;
+            padding-left: 15px;
+            text-indent: -15px;
+        }
+
+        input.checktask {
+            position: relative;
+            width: 34px;
+            height: 34px;
+            padding-left: 0;
+            margin-left: 30px;
+            margin-right: 20px;
+            vertical-align: bottom;
+            position: relative;
+            top: -1px;
+            
+        }
+
+        img.star {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            padding-left: 0;
+            margin-left: 30px;
+            margin-right: 20px;
+            vertical-align: bottom;
+            position: relative;
+            top: -1px;
+        }
+        .progress-bar {
+            position: relative;
+            bottom: 83px;
+            left: 590px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: 
+                radial-gradient(closest-side, #F7F8FC 79%, transparent 80% 100%),
+                conic-gradient(#FFCD59 75%, white 0);    
+        }
+
+        p.percent {
+            position: relative;
+            font-size: 20px;
+            top: 23px;
+            left: 17px;
+        }
+
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var actionCompleted = localStorage.getItem('actionCompleted');
+        var actionCompleted1 = localStorage.getItem('actionCompleted1');
+        var actionCompleted2 = localStorage.getItem('actionCompleted2');
+        var actionCompleted3 = localStorage.getItem('actionCompleted3');
+        var actionCompleted4 = localStorage.getItem('actionCompleted4');
+        var actionCompleted5 = localStorage.getItem('actionCompleted5');
+        var actionCompleted6 = localStorage.getItem('actionCompleted6');
+        var actionCompleted7 = localStorage.getItem('actionCompleted7');
+        var actionCompleted8 = localStorage.getItem('actionCompleted8');
+        var actionCompleted9 = localStorage.getItem('actionCompleted9');
+        if (actionCompleted === 'true') {
+            document.getElementById('badge1').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted');
+
+        }
+        if (actionCompleted1 === 'true')
+        {
+            document.getElementById('badge2').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted1');
+        }
+        if (actionCompleted2 === 'true')
+        {
+            document.getElementById('badge3').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted2');
+        }
+        if (actionCompleted3 === 'true')
+        {
+            document.getElementById('badge4').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted3');
+        }
+        if (actionCompleted4 === 'true')
+        {
+            document.getElementById('badge5').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted4');
+        }
+        if (actionCompleted5 === 'true')
+        {
+            document.getElementById('badge6').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted5');
+        }
+        if (actionCompleted6 === 'true')
+        {
+            document.getElementById('badge7').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted6');
+        }
+        if (actionCompleted7 === 'true')
+        {
+            document.getElementById('badge8').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted7');
+        }
+        if (actionCompleted8 === 'true')
+        {
+            document.getElementById('badge9').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted8');
+        }
+        if (actionCompleted9 === 'true')
+        {
+            document.getElementById('badge10').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted9');
+        }
+        });
+    </script>
+
+    </head>
+    <body>
+
+        <div class="nav-menu">
+            <img class="logo" src="images/logo_icon.svg" alt="Description of the image" style="width: 120px; height: auto;">
+            <a href="index.html" class="page">Dashboard</a>
+            <a href="profile.html" class="active-page page">Profile</a>
+            <a href="settings.html" class="page">Settings</a>
+            <a href="support.html" class="page">Support</a>
+            <a href="login.html" class="page">Log Out</a>
+        </div>
+        
+        <div class="main-content">
+
+            <div class="unii-friend">
+                <h1>Your Unii Friend</h1><br>
+                <img src="\webpage\images\friend.svg" style="position: relative; left:200px;">
+
+            </div>
+
+            <div class="badges">
+                <h1>Badges</h1>
+                <img id="badge1" src="images/badge1.png" style="display: none;">
+                <img id="badge2" src="images/badge1.png" style="display: none;">
+                <img id="badge3" src="images/badge1.png" style=" display: none;">
+                <img id="badge4" src="images/badge1.png" style=" display: none;">
+                <img id="badge5" src="images/badge1.png" style=" display: none;">
+                <img id="badge6" src="images/badge1.png" style=" display: none;">
+                <img id="badge7" src="images/badge1.png" style=" display: none;">
+                <img id="badge8" src="images/badge1.png" style=" display: none;">
+                <img id="badge9" src="images/badge1.png" style=" display: none;">
+                <img id="badge10" src="images/badge1.png" style=" display: none;">
+            </div> 
+
+            <div class="progress-report">
+                <a class=report href=""><h1>Progress Report</h1> </a>
+                <div class="progress-bar">
+                    <p class="percent">75%</p>
+                </div>
+                <!-- Add content here -->
+            </div> 
+
+            <div class="daily-tasks">
+                <h1>Daily Tasks</h1>
+                <!-- Add content here -->
+                <label><input class="checktask" type="checkbox">Say “Hello” to your Unii Friend!</label> <br>
+                <label><input class="checktask" type="checkbox">Complete 2 Learning exercises!</label> <br>
+                <label><input class="checktask" type="checkbox">Complete 1 Review!</label> <br>
+                <label><input class="checktask" type="checkbox">Earn a Badge!</label> <br>       
+                
+            </div> 
+
+            <div class="achievements">
+                <h1>Achievements</h1>
+                <label><img class="star" src="\webpage\images\star.png">Earn a Badge!</label> <br> 
+                <label><img class="star" src="\webpage\images\star.png">10 day Streak!</label> <br>       
+                
+            </div> 
+
+        </div>
+    </body>
+
+    
+</html>
