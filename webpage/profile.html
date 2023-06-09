@@ -219,15 +219,63 @@
         document.addEventListener('DOMContentLoaded', function() {
         var actionCompleted = localStorage.getItem('actionCompleted');
         var actionCompleted1 = localStorage.getItem('actionCompleted1');
+        var actionCompleted2 = localStorage.getItem('actionCompleted2');
+        var actionCompleted3 = localStorage.getItem('actionCompleted3');
+        var actionCompleted4 = localStorage.getItem('actionCompleted4');
+        var actionCompleted5 = localStorage.getItem('actionCompleted5');
+        var actionCompleted6 = localStorage.getItem('actionCompleted6');
+        var actionCompleted7 = localStorage.getItem('actionCompleted7');
+        var actionCompleted8 = localStorage.getItem('actionCompleted8');
+        var actionCompleted9 = localStorage.getItem('actionCompleted9');
         if (actionCompleted === 'true') {
-            document.getElementById('badge1').style.display = 'block';
-            //localStorage.removeItem('actionCompleted');
+            document.getElementById('badge1').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted');
 
         }
         if (actionCompleted1 === 'true')
         {
-            document.getElementById('badge2').style.display = 'block';
-            //localStorage.removeItem('actionCompleted1');
+            document.getElementById('badge2').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted1');
+        }
+        if (actionCompleted2 === 'true')
+        {
+            document.getElementById('badge3').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted2');
+        }
+        if (actionCompleted3 === 'true')
+        {
+            document.getElementById('badge4').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted3');
+        }
+        if (actionCompleted4 === 'true')
+        {
+            document.getElementById('badge5').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted4');
+        }
+        if (actionCompleted5 === 'true')
+        {
+            document.getElementById('badge6').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted5');
+        }
+        if (actionCompleted6 === 'true')
+        {
+            document.getElementById('badge7').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted6');
+        }
+        if (actionCompleted7 === 'true')
+        {
+            document.getElementById('badge8').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted7');
+        }
+        if (actionCompleted8 === 'true')
+        {
+            document.getElementById('badge9').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted8');
+        }
+        if (actionCompleted9 === 'true')
+        {
+            document.getElementById('badge10').style.display = 'inline-block';
+            localStorage.removeItem('actionCompleted9');
         }
         });
     </script>
@@ -254,8 +302,16 @@
 
             <div class="badges">
                 <h1>Badges</h1>
-                <img id="badge1" src="images/badge1.png" style="padding-left:40px; display: none;">
-                <img id="badge2" src="images/badge2.png" style="padding-left:40px; display: none;">
+                <img id="badge1" src="images/badge1.png" style="display: none;">
+                <img id="badge2" src="images/badge1.png" style="display: none;">
+                <img id="badge3" src="images/badge1.png" style=" display: none;">
+                <img id="badge4" src="images/badge1.png" style=" display: none;">
+                <img id="badge5" src="images/badge1.png" style=" display: none;">
+                <img id="badge6" src="images/badge1.png" style=" display: none;">
+                <img id="badge7" src="images/badge1.png" style=" display: none;">
+                <img id="badge8" src="images/badge1.png" style=" display: none;">
+                <img id="badge9" src="images/badge1.png" style=" display: none;">
+                <img id="badge10" src="images/badge1.png" style=" display: none;">
             </div> 
 
             <div class="progress-report">

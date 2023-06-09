@@ -167,16 +167,73 @@
         document.addEventListener('DOMContentLoaded', function() {
         var prog = localStorage.getItem('progress');
         var prog1 = localStorage.getItem('progress1');
+        var prog2 = localStorage.getItem('progress2');
+        var prog3 = localStorage.getItem('progress3');
+        var prog4 = localStorage.getItem('progress4');
+        var prog5 = localStorage.getItem('progress5');
+        var prog6 = localStorage.getItem('progress6');
+        var prog7 = localStorage.getItem('progress7');
+        var prog8 = localStorage.getItem('progress8');
+        var prog9 = localStorage.getItem('progress9');
+
         if (prog === 'true') {
             document.getElementById('ldone').style.display = 'block';
             document.getElementById('lnotdone').style.display = 'none';
-            //localStorage.removeItem('progress');
+            localStorage.removeItem('progress');
         }
         if (prog1 === 'true')
         {
             document.getElementById('d').style.display = 'block';
             document.getElementById('nd').style.display = 'none';
-            //localStorage.removeItem('progress1');
+            localStorage.removeItem('progress1');
+        }
+        if (prog2 === 'true')
+        {
+            document.getElementById('s2').style.display = 'block';
+            document.getElementById('p2').style.display = 'none';
+            localStorage.removeItem('progress2');
+        }
+        if (prog3 === 'true')
+        {
+            document.getElementById('s3').style.display = 'block';
+            document.getElementById('p3').style.display = 'none';
+            localStorage.removeItem('progress3');
+        }
+        if (prog4 === 'true')
+        {
+            document.getElementById('s4').style.display = 'block';
+            document.getElementById('p4').style.display = 'none';
+            localStorage.removeItem('progress4');
+        }
+        if (prog5 === 'true')
+        {
+            document.getElementById('s5').style.display = 'block';
+            document.getElementById('p5').style.display = 'none';
+            localStorage.removeItem('progress5');
+        }
+        if (prog6 === 'true')
+        {
+            document.getElementById('s6').style.display = 'block';
+            document.getElementById('p6').style.display = 'none';
+            localStorage.removeItem('progress6');
+        }
+        if (prog7 === 'true')
+        {
+            document.getElementById('s7').style.display = 'block';
+            document.getElementById('p7').style.display = 'none';
+            localStorage.removeItem('progress7');
+        }
+        if (prog8 === 'true')
+        {
+            document.getElementById('s8').style.display = 'block';
+            document.getElementById('p8').style.display = 'none';
+            localStorage.removeItem('progress8');
+        }
+        if (prog9 === 'true')
+        {
+            document.getElementById('s9').style.display = 'block';
+            document.getElementById('p9').style.display = 'none';
+            localStorage.removeItem('progress9');
         }
     });
 
@@ -202,7 +259,7 @@
                 <div class="task-card">
                     <h2 class="activity">1</h2>
                     <img class=bar id="lnotdone" src = "images/percent.png" style="display: block;">
-                    <img class=star id="d" src="images/star.png" style="display: none;">
+                    <img class=bar id="ldone" src="images/star.png" style="display: none;">
                     <h3 class="activity">Learn: A - F</h3>
                     
                 </div>
@@ -211,8 +268,8 @@
             <a class="activity" href="letter_sound_activity/letter_g_l.html" >
                 <div class="task-card">
                     <h2 class="activity">2</h2>
-                    <img class=bar id="lnotdone" src = "images/percent.png" style="display: block;">
-                    <img class=star id="d" src="images/star.png" style="display: none;">
+                    <img class=bar id="nd" src = "images/percent.png" style="display: block;">
+                    <img class=bar id="d" src="images/star.png" style="display: none;">
                     <h3 class="activity">Learn: G - L</h3>
                 </div>
             </a>
@@ -220,6 +277,8 @@
             <a class="activity" href="letter_sound_activity/letter_m_r.html" >
                 <div class="task-card">
                     <h2 class="activity">3</h2>
+                    <img class=bar id="p2" src = "images/percent.png" style="display: block;">
+                    <img class=bar id="s2" src="images/star.png" style="display: none;">
                     <h3 class="activity">Learn: M - R</h3>
                     
                 </div>
@@ -228,6 +287,8 @@
             <a class="activity" href="letter_sound_activity/letter_s_z.html" >
                 <div class="task-card">
                     <h2 class="activity">4</h2>
+                    <img class=bar id="p3" src = "images/percent.png" style="display: block;">
+                    <img class=bar id="s3" src="images/star.png" style="display: none;">
                     <h3 class="activity">Learn: S - Z</h3>
                     
                 </div>
@@ -236,6 +297,8 @@
             <a class="activity" href="letter_sound_activity/english_letter.html" >
                 <div class="task-card">
                     <h2 class="activity">5</h2>
+                    <img class=bar id="p4" src = "images/percent.png" style="display: block;">
+                    <img class=bar id="s4" src="images/star.png" style="display: none;">
                     <h3 class="activity">Review: A - Z</h3>
                     
                 </div>
@@ -244,6 +307,8 @@
             <a class="activity" href="letter_blend_activity/blend_b_g.html" >
                 <div class="task-card">
                     <h2 class="activity">6</h2>
+                    <img class=bar id="p5" src = "images/percent.png" style="display: block;">
+                    <img class=bar id="s5" src="images/star.png" style="display: none;">
                     <h3 class="activity">Learn: b - g</h3>
                     
                 </div>
@@ -252,6 +317,8 @@
             <a class="activity" href="letter_blend_activity/blend_h_m.html" >
                 <div class="task-card">
                     <h2 class="activity">7</h2>
+                    <img class=bar id="p6" src = "images/percent.png" style="display: block;">
+                    <img class=bar id="s6" src="images/star.png" style="display: none;">
                     <h3 class="activity">Learn: h - m</h3>
                     
                 </div>
@@ -260,6 +327,8 @@
             <a class="activity" href="letter_blend_activity/blend_n_s.html" >
                 <div class="task-card">
                     <h2 class="activity">8</h2>
+                    <img class=bar id="p7" src = "images/percent.png" style="display: block;">
+                    <img class=bar id="s7" src="images/star.png" style="display: none;">
                     <h3 class="activity">Learn: n - s</h3>
                     
                 </div>
@@ -268,6 +337,8 @@
             <a class="activity" href="letter_blend_activity/blend_t_z.html" >
                 <div class="task-card">
                     <h2 class="activity">9</h2>
+                    <img class=bar id="p8" src = "images/percent.png" style="display: block;">
+                    <img class=bar id="s8" src="images/star.png" style="display: none;">
                     <h3 class="activity">Learn: t - z</h3>
                     
                 </div>
@@ -275,7 +346,9 @@
 
             <a class="activity" href="letter_blend_activity/english_letter_blend.html" >
                 <div class="task-card">
-                    <h2 class="activity">9</h2>
+                    <h2 class="activity">10</h2>
+                    <img class=bar id="p9" src = "images/percent.png" style="display: block;">
+                    <img class=bar id="s9" src="images/star.png" style="display: none;">
                     <h3 class="activity">Review: b - z</h3>
                     
                 </div>
