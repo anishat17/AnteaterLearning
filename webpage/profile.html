@@ -82,6 +82,14 @@
             padding: 20px;
         }
 
+        a.report {
+            color: black;
+        }
+
+        a.report:hover {
+            color: #99B7F0;
+        }
+
         /* MAIN PROFILE CONTENT */
 
         div.main-content {
@@ -186,6 +194,24 @@
             position: relative;
             top: -1px;
         }
+        .progress-bar {
+            position: relative;
+            bottom: 83px;
+            left: 590px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: 
+                radial-gradient(closest-side, #F7F8FC 79%, transparent 80% 100%),
+                conic-gradient(#FFCD59 75%, white 0);    
+        }
+
+        p.percent {
+            position: relative;
+            font-size: 20px;
+            top: 23px;
+            left: 17px;
+        }
 
     </style>
 
@@ -222,7 +248,7 @@
 
             <div class="unii-friend">
                 <h1>Your Unii Friend</h1><br>
-                <img src="\webpage\images\friend.png">
+                <img src="\webpage\images\friend.svg" style="position: relative; left:200px;">
 
             </div>
 
@@ -233,7 +259,10 @@
             </div> 
 
             <div class="progress-report">
-                <h1>Progress Report</h1>
+                <a class=report href=""><h1>Progress Report</h1> </a>
+                <div class="progress-bar">
+                    <p class="percent">75%</p>
+                </div>
                 <!-- Add content here -->
             </div> 
 
